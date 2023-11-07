@@ -5,8 +5,12 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-	background: rgb(230, 230, 230);
+	font-family: Arial, Helvetica, sans-serif;
+	background: rgb(253, 245, 238);
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 /* cabecera */
@@ -14,29 +18,16 @@ body {
 	display: flex;
 	width: 100%;
 	height: 140px;
-	/* background: red; */
-}
-.btnMenu {
-	display: flex;
-	width: 10%;
-	justify-content: center; 
-    align-items: center;
-	height: auto;
-	/* background: white; */
+	background: white;
 }
 .btnLogo {
 	display: flex;
-	width: 20%;
+	width: 40%;
     align-items: center;
 	height: auto;
 	/* background: orange; */
 }
-.espaciador{
-	display: flex;
-	width: 5%;
-	height: auto;
-	/*background: red;*/
-}
+
 .listaMenu {
 	display: flex;
 	width: 50%;
@@ -51,7 +42,7 @@ body {
 	justify-content: center; 
     align-items: center;
 	height: auto;
-	/*background: blue;*/
+	/* background: blue; */
 }
 .btnCarrito {
 	display: flex;
@@ -59,48 +50,8 @@ body {
 	width: 5%;
     align-items: center;
 	height: auto;
-	/*background: cyan;*/
+	/* background: cyan; */
 }
-
-/* boton desplegable Menu */
-button {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 3rem;
-	height: 3rem;
-	border: 0;
-	background: transparent;
-	gap:.80rem;
-
-	/*Agregado*/ cursor: pointer;
-}
-
-button > div {
-	background: black;
-	height: 3px;
-	width: 100%;
-	border-radius: 5px;
-	transition: all .5s;
-	transform-origin: left;
-}
-
-button:hover div:first-child{
-	transform: rotate(45deg);
-}
-
-button:hover div:nth-child(2) {
-	opacity: 0;
-}
-
-button:hover div:last-child {
-	transform: rotate(-45deg);
-}
-
-
-/* Estilos para el menu desplegable */
-
-
 
 
 /* Estilos para la lista */
@@ -197,41 +148,62 @@ input {
 	background: #F60;
 }
 
-/* Eslogan */
-section#eslogan {
+/* Estilos para la presentacion */
+section#presentacion {
 	display: flex;
-	background: #FFF url(../img/Supermercado.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	flex-direction: column;
-	margin: 0 auto;
-	width: 100%;
-	height: 55em;
+	margin-left: 10%;
 	align-items: center;
-	justify-content: center;
-	text-align: center;
+	width: 80%;
+	height: 45em;
+	/* background: red; */
 }
-.indicador {
+section#textoPresentacion {
 	display: flex;
-	font-size: 300%;
-	margin-top: 3%;
+	flex-direction: column;
+	width: 60%;
+	/* background: blue; */
 }
-p#eslogan {
-	font-size: 350%;
-	font-weight: bold;
-	color: #FFF;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+section#imagenPresentacion {
+	display: flex;
+	width: 40%;	
+	justify-content: center;
+	/* background: red; */
+}
+section#imagenPresentacion img{
+	max-height: 100%;
+	border-radius: 5%;
+	margin-left: 3em;
+}
+h1#tituloPresentacion {
+	font-family: 'Arial';
+	font-size: 3.9em;
+	color: #F60;
+}
+p#parrafoPresentacion {
+	font-family: 'OpenSans', 'Arial'; /*Agregar OpenSans*/
+	padding-right: 3%;
+	padding-top: 3%;
+	font-size: 1.3em;
+}
+a#explorar {
+	background: #F60;
+	color: white;
+	text-align: center;
+	padding: 2%;
+	font-size: 1.4em;
+	width: 7em;
+	border-radius: 0.4em;
 }
 
 /* Nosotros */
 section#nosotros {
 	display: flex;
 	flex-direction: column;
-	/*background: red; */
-	margin: 0 auto;
+	background: #FFF url(../img/Nosotros-fondo.jpg);
+	background-position: center;
+	
 	width: 100%;
-	height: 43em;
+	height: 45em;
 	justify-content: center;
 }
 
@@ -302,26 +274,233 @@ section#vision-imagen{
 	margin-left: 10%;
 }
 
-/* Ofertas */
+/* Productos */
+section#productos {
+	background:rgb(209, 209, 255);
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 100%;
+	height: 45em;
+	align-items: center;
+	justify-content: center;
+}
+h2#titulo-Ofertas {
+	color:#F60;
+	padding-left: 5%;
+	padding-top: 2%;
+	font-size: 2.2em;
+}
 section#ofertas {
 	display: flex;
 	flex-direction: column;
-	background: white;
-	margin: 0 auto;
-	width: 100%;
-	height: 30em;
-	justify-content: center;
+	background:rgb(253, 245, 238);
+	width: 90%;
+	height: 85%;
+	border-radius: 4em;
+	box-shadow: 3px 3px 6px rgba(0.2, 0.2, 0.2, 0.2);;
 }
 
-/* Productos */
-section#productos {
+.btn-3{
+	display: inline-block;
+	padding: 2%;
+	color: rgb(255, 255, 255);
+	border: 2px solid rgb(255, 0, 0);
+	text-transform: capitalize;
+	border-radius: 15px;
+	background-color: rgb(255, 0, 0);
+
+}
+
+.descuento{
+	color: rgb(255, 0, 0);
+}
+.oferts-content{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 5px;
+}
+.ofert-1, .ofert-2, .ofert-3{
+	flex-basis: calc(25% - 25px);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	padding: 2%;
+	text-align: center;
+	background-color: #FFF;
+	border-radius: 10px;
+}
+.verMas {
 	display: flex;
 	flex-direction: column;
-	background: rgb(141, 120, 120);
-	margin: 0 auto;
-	width: 100%;
-	height: 30em;
+	align-items: center;
 	justify-content: center;
+	text-align: center;
+	padding: 1em;
 }
 
-/* Contacto */
+/* Contactanos */
+section#contactanos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 20em;
+	/* background: #ffdece; */
+	
+}
+
+section#c-Logo {
+	display: flex;
+	margin-top: 1%;
+	/* background: red; */
+	flex-direction: row;
+	align-items: center;
+	width: 30%;
+	margin-left: 30%;
+}
+
+section#c-Contenido {
+	margin-left: 1%;
+	/* background: blue; */
+	display: flex;
+	flex-direction: column;
+}
+
+
+h1#c1 {
+	text-align: center;
+	color: #F60;
+	font-size: 2em;
+}
+
+h3#c2 {
+	margin-top: 1%;
+	font-size: 1.4em;
+}
+
+p#c3 {
+	display: flex;
+	flex-direction: row;
+	font-size: 1em;
+}
+a#c4 {
+	margin-left: 7px;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+i#c-Logo {
+	width: 1.5em;
+	text-align: center;
+	/* background: #F60; */
+	font-size: 2em;
+}
+
+/* Redes sociales */
+.buttons {
+	min-width: 700px;
+	display: flex;
+	flex-direction: column;
+}
+
+.buttons a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	text-decoration: none;
+	font-size: 28px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background: #314652;
+	color: #f1f1f1;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+	transition: all .4s ease-in-out;
+}
+
+.buttons a:hover {
+	transform: scale(1.2);
+}
+
+.info {
+	background: red;
+	width: 50%;
+}
+.redes {
+	/* background: red; */
+	width: 50%;
+}
+.c-general {
+	display: flex;
+}
+
+/* Menu lateral */
+.container-botonmenu .btn-menu label{
+	color: #fff;
+	font-size: 25px;
+	cursor: pointer;
+	padding: 45px;
+}
+
+#btn-menu{
+	display: none;
+}
+
+.container-menu5{
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu5{
+	opacity: 5;
+	visibility: visible;	
+}
+.cont-menu{
+	width: 100%;
+	width: 500px;
+	max-height: 100%;
+	background: #ffffff;
+	height: 100vh;
+	position: relative;
+	transition: all 500ms ease;
+	transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu5 .cont-menu{
+	transform: translateX(0%);
+}
+.cont-menu nav{
+	transform: translateY(15%);
+}
+.cont-menu nav a{
+	display: block;
+	text-decoration: none;
+	padding: 10px;
+	padding-left: 30px;
+	width: 456px;
+	color: #000000;
+	border-left: 5px solid transparent;
+	transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+	border-left: 5px solid #000000;
+	background: #382b2b;
+	color: #fff;
+	
+	
+}
+.cont-menu label{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 18px;
+}

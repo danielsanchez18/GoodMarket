@@ -4,34 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoodMarket</title>
+    <script src="scripts/script.js"></script>
+    <link rel="shortcut icon" type="img/x-ico" href="img/GoogMarket1-logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <!-- CABECERA -->
+    
+
     <div class="cabecera">
-        <div class="btnMenu">
-            <button>
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-        </div>
+
         <div class="btnLogo">
-            <a href="index.html"><img src="img/GoogMarket-logo.png"></a>
+            
+            <!-- menu desplegable -->
+            <div class="container-botonmenu">
+                <div class="btn-menu">
+                    <label for="btn-menu"><i class="fa-solid fa-bars" style="color: #000000;"></i></label>
+                </div>
+            </div>
+            <input type="checkbox" id="btn-menu">
+            <div class="container-menu5">
+                <div class="cont-menu">
+                    <nav>
+                        <a href="#">Portafolio</a>
+                        <a href="#">Servicios</a>
+                        <a href="#">Suscribirse</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Youtube</a>
+                        <a href="#">Instagram</a>
+                    </nav>
+                    <label for="btn-menu"><i class="fa-solid fa-xmark" style="color: #000000;"></i></label>
+                </div>
+            </div>
+
+            <a href="index.html"><img src="img/GoogMarket-logo.png"></a>   
         </div>
-        <div class="espaciador">
-            <p></p>
-        </div>
+        
+        
         <div class="listaMenu">
             <nav>
                 <ul>
                     <li><a id="inicio" href="index.html">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="index.html">Ofertas</a></li>
-                    <li><a href="index.html">Productos</a></li>
-                    <li><a href="index.html">Contacto</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#categorias">Productos</a></li>
+                    <li><a href="#contactanos">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,18 +68,24 @@
         </div>
         <div class="btnCarrito">
             <a href="index.html"><i class="fa-solid fa-basket-shopping"></i></a>
-        </div>
-        
+        </div>    
     </div>
 
-    <!-- Eslogan -->
-    <section id="eslogan">
-        <p id="eslogan">Calidad y precios bajos siempre</p>
-        <div class="indicador">            
-            <a href="#ofertas">
-                <i class="fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
-            </a>
-        </div>
+    <!-- Presentacion -->
+    <section id="presentacion">
+        <section id="textoPresentacion">
+            <h1 id="tituloPresentacion">Bienvenido a GoodMarket</h1>
+        <p id="parrafoPresentacion">
+            Explora nuestra amplia sección de productos de calidad y
+            encuentra todo lo que necesitas para tu hogar. Sumérgete 
+            en la experiencia de compra en GoodMarket y descubre las 
+            mejores ofertas y promociones. <br><br></p>
+        <a id="explorar" href="#ofertas">Explorar ahora</a>
+        <br>
+        </section>
+        <section id="imagenPresentacion">
+            <img src="img/Presentacion GoodMarket.jpeg" alt="Presentacion">        
+        </section>
     </section>
 
     <!-- Nosotros -->
@@ -101,27 +126,112 @@
                     bienvenidas, superando las expectativas en cada visita.</p>
             </section>
         </section>
-
         <br><br><br><br><br>
-    </section>
-
-    <!-- Ofertas -->
-    <section id="ofertas">
-        <p>OFERTAS</p>
     </section>
 
     <!-- Productos -->
     <section id="productos">
-        <p>PRODUCTOS</p>
+        <!-- Ofertas -->
+        <section id="ofertas">
+            <h2 id="titulo-Ofertas">Ofertas Especiales</h2>
+            <br>
+            <div class="oferts-content">
+                <div class="ofert-1">
+                    <img src="img/productos/azucar.png" width="200" height="200" >
+                    <div class="product-txt">
+                        <h3>AZUCAR</h3>  
+                        <p>Azucar Rubia Vega</p>           
+                        <p class="precio"><s>S/30.00</s></p>
+                        <p class="descuento">S/20.99</p>
+                        <br>
+                        <a href="#" class="btn-3" data-id="1">Agregar</a>    
+                    </div>
+                    
+                </div>
+
+                <div class="ofert-2">
+                    <img src="img/productos/arroz.png" width="200" height="200">
+                    <div class="product-txt">
+                        <h3>ARROZ</h3>
+                        <p>Arroz Costeño 5Kg</p>
+                        <p class="precio"><s>S/25.90</s></p>
+                        <p class="descuento">S/22.99</p>
+                        <br>
+                        <a href="#" class="btn-3" data-id="2">Agregar</a>
+                    </div>
+                </div>
+                <div class="ofert-3">
+                    <img src="img/productos/aceite.png" width="200" height="200">
+                    <div class="product-txt">
+                        <h3>ACEITE</h3>
+                        <p>Pack Aceite Vegetal Primor</p>
+                        <p class="precio"><s>S/22.00</s></p>
+                        <p class="descuento">S/16.50</p>
+                        <br>
+                        <a href="#" class="btn-3" data-id="3">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="verMas">
+                <a href="index.html"><p>Ver mas</p></a>
+                
+                <a href="index.html">
+                    <i class="fa-solid fa-chevron-up fa-rotate-180" style="color: black;"></i>
+                </a>
+            </div>
+        </section>
     </section>
 
-    <!-- Contacto -->
+    <!-- Categorías -->
+    <section id="productos">
+        <section id="categorias">
+
+        </section>
+    </section>
+
+    <!-- Contactanos -->
+    <section id="contactanos">
+        <h1 id="c1">Comunícate con nosotros</h1>
+
+        <section id="c-Logo">
+            <i id="c-Logo" class="fa-solid fa-envelope" style="color: #000000;"></i>
+
+            <section id="c-Contenido">    
+                <h3 id="c2">Escríbenos</h3>
+                <p id="c3">Estamos para ayudarte: 
+                    <a id="c4" href="mailto:goodmarket_per@gmail.com">goodmarket_pe@gmail.com</a>
+                </p>
+            </section>
+        </section>
+
+        <section id="c-Logo">
+            <i id="c-Logo" class="fa-solid fa-phone" style="color: #000000;"></i>
+
+            <section id="c-Contenido">            
+                <h3 id="c2">Llámanos</h3>
+                <p id="c3">Centro de atención al cliente: 
+                    <a id="c4">+51 936245721</a> 
+                </p>
+            </section>
+        </section>
+
+        <section id="c-Logo">
+            <i id="c-Logo" class="fa-solid fa-store" style="color: #000000;"></i>
+            
+            <section id="c-Contenido">            
+                <h3 id="c2">Visítanos</h3>
+                <p id="c3">4651 Avenida Arequipa, Miraflores, Lima, Perú</p>
+            </section>
+        </section>
+    </section> 
 
     <!--Script para utilizar icono de fontawesome-->
     <script
         src="https://kit.fontawesome.com/81581fb069.js"
         crossorigin="anonymous"
-    ></script>
+    >
+    leerArchivoCSV(GoodMarket-Categorías.txt);
+</script>
     
 </body>
 </html>
